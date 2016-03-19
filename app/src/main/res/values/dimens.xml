@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+Refer to App Widget Documentation for margin information
+http://developer.android.com/guide/topics/appwidgets/index.html#CreatingLayout
+    -->
+    <dimen name="widget_margin">8dp</dimen>
+    <dimen name="market_size_text">18sp</dimen>
+    <dimen name="corner_card">2dp</dimen>
+    <dimen name="tittle_size">17sp</dimen>
+    <dimen name="price_size">22sp</dimen>
+    <dimen name="item_size">15sp</dimen>
+    <dimen name="button_size">18sp</dimen>
+
+</resources>

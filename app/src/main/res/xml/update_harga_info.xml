@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:configure="net.mnafian.testwidget.UpdateHargaConfigureActivity"
+    android:initialKeyguardLayout="@layout/update_harga"
+    android:initialLayout="@layout/update_harga"
+    android:minHeight="180dp"
+    android:minWidth="250dp"
+    android:previewImage="@drawable/ic_shopping_basket_white_48dp"
+    android:resizeMode="horizontal|vertical"
+    android:updatePeriodMillis="86400000"
+    android:widgetCategory="home_screen"></appwidget-provider>

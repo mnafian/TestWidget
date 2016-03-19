@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">TestWidget</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="pasar_sample">PASAR KRAMAT JATI</string>
+    <string name="configure">Configure</string>
+    <string name="cabe_sample">Cabe Keriting Merah</string>
+    <string name="price_sample">25.000</string>
+    <string name="kg_sample">/Kg</string>
+    <string name="detail_price">LIHAT LEBIH LENGKAP</string>
+    <string name="no_data">BELUM ADA DATA</string>
+    <string name="sorry">SORRY, NOT AVAILABLE</string>
+</resources>
