@@ -50,8 +50,9 @@ public class DataPriceService extends Service implements ServiceController.Prese
                         AppWidgetManager.INVALID_APPWIDGET_ID);
             serviceController = new ServiceController(this);
             fetchDataPrice();
+            Log.i("Data Fetched", "true");
         }
-        return super.onStartCommand(intent, flags, startId);
+        return START_STICKY;
     }
 
     private void fetchDataPrice() {

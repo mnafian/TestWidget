@@ -57,11 +57,14 @@ public class ListProviderAdapter implements RemoteViewsFactory {
         final RemoteViews remoteView = new RemoteViews(
                 context.getPackageName(), R.layout.update_harga_item);
         ListDataPrice listItem = listItemList.get(position);
+        String status = listItem.getStatus();
+        Integer price = Integer.valueOf(listItem.getPrice());
+        String priceDecimal = String.format("%,d", price);
+
         remoteView.setTextViewText(R.id.tv_tittle, listItem.getName().toUpperCase());
-        remoteView.setTextViewText(R.id.tv_price, listItem.getPrice());
+        remoteView.setTextViewText(R.id.tv_price, priceDecimal);
         remoteView.setTextViewText(R.id.tv_tipe_satuan, "/" + listItem.getUnit());
 
-        String status = listItem.getStatus();
         if (status.equals("down")) {
             remoteView.setImageViewResource(R.id.img_up_down, R.drawable.ic_1458365676_navigation_down_basic_green);
         } else {
