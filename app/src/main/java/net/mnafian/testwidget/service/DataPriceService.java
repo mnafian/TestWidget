@@ -1,9 +1,13 @@
 package net.mnafian.testwidget.service;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.app.Service;
 import android.appwidget.AppWidgetManager;
+import android.content.Context;
 import android.content.Intent;
 import android.os.IBinder;
+import android.os.SystemClock;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.widget.Toast;
@@ -84,6 +88,12 @@ public class DataPriceService extends Service implements ServiceController.Prese
     @Override
     public void showError(Throwable throwable) {
         Toast.makeText(this, "Error on received", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        sendBroadcast(new Intent("PleaseDontKillMe"));
     }
 
     private void populateWidget() {

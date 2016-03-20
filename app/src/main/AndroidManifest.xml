@@ -43,6 +43,12 @@
 
         <service android:name=".service.DataPriceService" />
 
+        <receiver android:name=".utilities.RestartServiceReceiver">
+            <intent-filter>
+                <action android:name="PleaseDontKillMe"></action>
+            </intent-filter>
+        </receiver>
+
         <receiver android:name=".service.PhoneBootCompleteReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />

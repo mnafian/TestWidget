@@ -1,8 +1,10 @@
 package net.mnafian.testwidget.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import net.mnafian.testwidget.R;
+import net.mnafian.testwidget.service.DataPriceService;
 
 import id.zelory.benih.ui.BenihActivity;
 
@@ -24,6 +26,6 @@ public class ViewEmptyActivity extends BenihActivity {
 
     @Override
     protected void onViewReady(Bundle savedInstanceState) {
-
+        startService(new Intent(getApplicationContext(), DataPriceService.class));
     }
 }

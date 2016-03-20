@@ -26,12 +26,9 @@ import java.util.List;
 public class ListProviderAdapter implements RemoteViewsFactory {
     private List<ListDataPrice> listItemList = new ArrayList<>();
     private Context context = null;
-    private int appWidgetId;
 
-    public ListProviderAdapter(Context context, Intent intent, int appWidgetId) {
+    public ListProviderAdapter(Context context) {
         this.context = context;
-        this.appWidgetId = appWidgetId;
-
         populateListItem();
     }
 

@@ -11,21 +11,16 @@ package net.mnafian.testwidget.service;
  * Project    : TestWidget
  */
 
-import android.appwidget.AppWidgetManager;
 import android.content.Intent;
 import android.widget.RemoteViewsService;
 
 import net.mnafian.testwidget.ListProviderAdapter;
-import net.mnafian.testwidget.UpdateHargaView;
 
 public class WidgetService extends RemoteViewsService {
 
     @Override
     public RemoteViewsFactory onGetViewFactory(Intent intent) {
-        int appWidgetId = Integer.valueOf(intent.getData().getSchemeSpecificPart())
-                - UpdateHargaView.randomNumber;
-
-        return (new ListProviderAdapter(this.getApplicationContext(), intent, appWidgetId));
+        return (new ListProviderAdapter(this.getApplicationContext()));
     }
 
 }
