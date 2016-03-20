@@ -43,12 +43,14 @@ public class DataPriceService extends Service implements ServiceController.Prese
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        if (intent.hasExtra(AppWidgetManager.EXTRA_APPWIDGET_ID))
-            appWidgetId = intent.getIntExtra(
-                    AppWidgetManager.EXTRA_APPWIDGET_ID,
-                    AppWidgetManager.INVALID_APPWIDGET_ID);
-        serviceController = new ServiceController(this);
-        fetchDataPrice();
+        if (intent != null) {
+            if (intent.hasExtra(AppWidgetManager.EXTRA_APPWIDGET_ID))
+                appWidgetId = intent.getIntExtra(
+                        AppWidgetManager.EXTRA_APPWIDGET_ID,
+                        AppWidgetManager.INVALID_APPWIDGET_ID);
+            serviceController = new ServiceController(this);
+            fetchDataPrice();
+        }
         return super.onStartCommand(intent, flags, startId);
     }
 
