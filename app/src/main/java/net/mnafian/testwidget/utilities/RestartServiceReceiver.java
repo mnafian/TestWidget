@@ -24,7 +24,7 @@ public class RestartServiceReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         Log.e(TAG, "onReceive");
-        context.startService(new Intent(context.getApplicationContext(), DataPriceService.class));
+        ServiceChecker.isMyServiceRunning(DataPriceService.class, context.getApplicationContext());
     }
 
 }

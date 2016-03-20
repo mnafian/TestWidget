@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import net.mnafian.testwidget.R;
 import net.mnafian.testwidget.service.DataPriceService;
+import net.mnafian.testwidget.utilities.ServiceChecker;
 
 import id.zelory.benih.ui.BenihActivity;
 
@@ -26,6 +27,6 @@ public class ViewEmptyActivity extends BenihActivity {
 
     @Override
     protected void onViewReady(Bundle savedInstanceState) {
-        startService(new Intent(getApplicationContext(), DataPriceService.class));
+        ServiceChecker.isMyServiceRunning(DataPriceService.class, getApplicationContext());
     }
 }
